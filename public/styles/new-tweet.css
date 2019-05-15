@@ -25,10 +25,7 @@ hr{
     border-radius: 10px;
     border: solid 1px black;
     background-color: #eee;
-    
-    
   }
-
 .tweet:hover  {
     opacity: 1;
     border-radius: 10px;
@@ -66,12 +63,15 @@ header .image{
     border-radius: 7px 7px 0 0; 
     
 }
-.tweet-container footer{
+footer{
     color:green;
-    margin: 0 auto auto 10px;
+    margin: 0 auto 10px 10px;
 }
 .user-tag{
     text-align: right;
+}
+.content{
+    padding-left: 10px;
 }
 
 textarea {
