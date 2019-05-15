@@ -3,7 +3,7 @@ $(document).ready(function() {
     
     let count = 0 ;
     
-    $("textarea").keydown(function() {
+    $("textarea").keyup(function() {
         count = $('textarea').val().length;
         if(count > 140){
             $('.counter').text(140 - count).css({color:'red'});
@@ -14,7 +14,4 @@ $(document).ready(function() {
         
       });
       
-      
-   
-
   });

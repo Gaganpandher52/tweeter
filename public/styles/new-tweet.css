@@ -9,6 +9,7 @@ hr{
     margin: 10px 10px;
 }
 
+
 .new-tweet{
     margin: 50px 2em auto 2em;
     border-radius: 10px;
@@ -19,6 +20,58 @@ hr{
     padding: 20px 0px 40px 0px; 
 
 }
+.tweet-container{
+    margin: 50px 2em auto 2em;
+    border-radius: 10px;
+    border: solid 1px black;
+    background-color: #eee;
+    
+  }
+
+#newArticle:hover {
+    opacity: 1;
+}
+#newArticle{
+    opacity: 0.7;
+}
+
+header .image{
+    border-radius: 20px ;
+    float: left;
+    margin: 5px auto auto 5px;
+    
+    
+    
+}
+
+.inner{
+    padding-left: 20px;
+    display: inline; 
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    
+}
+.tweet-container article{
+    color:blue;
+    margin: 30px 20px;
+}
+.all-headers{
+    background-color: silver;
+    height: 60px;
+    /* /* border: solid 0.5px; */
+    border-radius: 7px 7px 0 0; 
+    
+}
+.tweet-container footer{
+    color:green;
+    margin: 0 auto auto 10px;
+}
+.user-tag{
+    text-align: right;
+}
+
 textarea {
     padding: 5px ;
     width: 350px;
