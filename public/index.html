@@ -15,13 +15,6 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   </head>
 
   <body>
@@ -44,25 +37,28 @@
             </form>
           </section>
 
-          <section class="tweet-container">
-              <div id="newArticle" >
-            <header class="all-headers">
-              <div class="inner">Bill Fields</div>
-              <div class="image"><img  src="https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png" alt=""></div>
-              <div class="user-tag">@Mrfields</div>
-            </header>
-            
-            <!-- <header class="inner">Bill Fields</header>
-            <header class="image"><img  src="https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png" alt=""></header>
-            <header class="user-tag">@Mrfields</header>  -->
-            <article>Now that you have the regular tweet </article>
-            <hr>
-            <footer>10 days ago</footer>
-            </div>
+          <section class="tweets-container">
+            <article class="tweet" >
+              <header class="all-headers">
+                <div class="inner">Bill Fields</div>
+                <div class="image"><img  src="https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png" alt=""></div>
+                <div class="user-tag">@Mrfields</div>
+              </header>
+             
+              <p  class="content">Now that you have the regular tweet</p>
+              <hr>
+              <footer class="newFooter">10 days ago</footer>
+            </article>
           </section>
         
     </main>
-    
-    
+
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   </body>
 </html>
