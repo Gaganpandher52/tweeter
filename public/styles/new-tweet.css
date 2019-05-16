@@ -92,3 +92,21 @@ input {
     padding-right: 15px;
     float: right;
 }
+
+.error-empty{
+    /* display: none; */
+   float: left;
+   margin-left: 10px;
+   display: none;
+   color: red;
+   border: solid 1px red 
+}
+
+.error-140{
+    /* display: none; */
+   float: left;
+   margin-left: 10px;
+   display: none;
+   color: red;
+   border: solid 1px red 
+}
