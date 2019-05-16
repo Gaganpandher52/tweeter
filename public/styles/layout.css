@@ -26,12 +26,10 @@ main.container{
   padding-top: 20px;
   margin: auto;
   background-color: white;
-  block-size: 2000%;
+  block-size: auto;
   color: #244751;
   width: 450px;
 }
-
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
