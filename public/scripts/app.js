@@ -33,27 +33,27 @@ function formatTime (time) {
   var interval = Math.floor(diff / 31536000);
 
   if (interval >= 1) {
-    return interval + "y";
+    return interval + "y" + " ago";
   }
   interval = Math.floor(diff / 2592000);
   if (interval >= 1) {
-    return interval + "m";
+    return interval + "m" + " ago";
   }
   interval = Math.floor(diff / 604800);
   if (interval >= 1) {
-    return interval + "w";
+    return interval + "w" + " ago";
   }
   interval = Math.floor(diff / 86400);
   if (interval >= 1) {
-    return interval + "d";
+    return interval + "d" + " ago";
   }
   interval = Math.floor(diff / 3600);
   if (interval >= 1) {
-    return interval + "h";
+    return interval + "h" + " ago";
   }
   interval = Math.floor(diff / 60);
   if (interval >= 1) {
-    return interval + " m";
+    return interval + " min" + " ago";
   }
   return "<1m";
 }
@@ -63,12 +63,11 @@ function renderTweets(tweets) {
       // takes return value and appends it to the tweets container
       //let value = [];
       for (const i in tweets) {
-        // value.push(createTweetElement(tweets[i]));
         $('.tweets-container').prepend(createTweetElement(tweets[i]))
       }
-      //return $('.tweets-container').append(value);
   }
-//renderTweets(data);
+
+//function isValidate()
 
 function clearTweet(){
     $('textarea').val('');
@@ -76,7 +75,13 @@ function clearTweet(){
 
 $(".tweet-form").submit(function(event){
     event.preventDefault();
-
+    if(!$('textarea').val()){
+      console.log('noooooo');
+      const $name = $('<p>').text('empty tweet')
+    }else if($('textarea').val().length > 140){
+      alert('more than 140');
+    }else{
+    
     var $form = $(this);
     let term = $form.find("textarea[name='text']").val();
     //let url = $form.attr("action");
@@ -86,6 +91,7 @@ $(".tweet-form").submit(function(event){
         loadedTweets();
         clearTweet();
     });
+  }
   });//form submit
 
   function loadedTweets(){
@@ -97,18 +103,5 @@ $(".tweet-form").submit(function(event){
 }
 
 renderTweets(loadedTweets());
-
-
-
-
-
-
-   
-    
-      
-
-
-
-
 
 });//document
