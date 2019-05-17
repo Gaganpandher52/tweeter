@@ -113,6 +113,6 @@ $(".tweet-form").submit(function(event){
     });
 }
 
-renderTweets(loadedTweets());
+loadedTweets();
 
 });//document
