@@ -93,7 +93,7 @@ $(".tweet-form").submit(function(event){
     event.preventDefault();
     if(!$('textarea').val()){
       $( ".error-empty" ).slideDown( "slow", function() {
-        $( ".error-empty" ).slideUp();
+        $( ".error-empty" ).fadeOut(5000);
       });
       const $name = $('<p>').text('empty tweet')
     }else if($('textarea').val().length > 140){
