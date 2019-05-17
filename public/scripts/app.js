@@ -5,11 +5,8 @@
  */
 $( document ).ready(function() {
 
-
-
+//this function is a dynamically create tweets using jquery
 function createTweetElement(data){
-    //const content = data.content.text;
-
     const $button = $('<$button>').addClass('compose-button');
     const $tweet = $('<article>').addClass('tweet')
     const $header = $('<header>').addClass('all-headers');
@@ -31,6 +28,7 @@ function createTweetElement(data){
 
     return $tweet.append($header).append($content).append($hr).append($footer);
 }
+//this function help to convert unix time stamp to simple time
 function formatTime (time) {
 	var diff = Math.floor((Date.now() - time) / 1000);
   var interval = Math.floor(diff / 31536000);
@@ -61,7 +59,7 @@ function formatTime (time) {
   return "<1m";
 }
 function renderTweets(tweets) {
-    // loops through tweets
+      // loops through tweets
       // calls createTweetElement for each tweet
       // takes return value and appends it to the tweets container
       //let value = [];
@@ -73,15 +71,8 @@ function renderTweets(tweets) {
 $( ".compose-button" ).click(function() {
   $( ".new-tweet" ).slideToggle( "slow", function() {
     $( "textarea" ).focus();
-
-    // Animation complete.
-  
   });
 });
-
-
-
-
 
 //function isValidate()
 
@@ -98,7 +89,7 @@ $(".tweet-form").submit(function(event){
       const $name = $('<p>').text('empty tweet')
     }else if($('textarea').val().length > 140){
       $( ".error-140" ).slideDown( "slow", function() {
-
+        $( ".error-140" ).fadeOut(5000);
       });
     }else{
     

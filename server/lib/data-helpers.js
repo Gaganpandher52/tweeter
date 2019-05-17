@@ -12,6 +12,8 @@ module.exports = function makeDataHelpers(db) {
       simulateDelay(() => {
         db.tweets.push(newTweet);
         callback(null, true);
+        //added
+       
       });
     },
 
@@ -20,6 +22,14 @@ module.exports = function makeDataHelpers(db) {
       simulateDelay(() => {
         const sortNewestFirst = (a, b) => a.created_at - b.created_at;
         callback(null, db.tweets.sort(sortNewestFirst));
+        //added
+        db.collection("tweets").find().toArray((err, tweets) => {
+          if (err) {
+            return callback(err);
+          }
+          callback(null, tweets);
+        });
+        //added
       });
     }
 
