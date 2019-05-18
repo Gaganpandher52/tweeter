@@ -68,6 +68,7 @@ function renderTweets(tweets) {
       }
   }
 
+//$( ".compose-button" ).hidden();
 $( ".compose-button" ).click(function() {
   $( ".new-tweet" ).slideToggle( "slow", function() {
     $( "textarea" ).focus();
@@ -108,7 +109,6 @@ $(".tweet-form").submit(function(event){
   function loadedTweets(){
     $.ajax({url:'/tweets',  method: 'GET' })
     .then(function (tweets) {
-      //$('.tweet-container')
       renderTweets(tweets);
     });
 }
