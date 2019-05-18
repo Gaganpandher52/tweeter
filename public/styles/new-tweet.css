@@ -30,9 +30,18 @@ hr{
 .tweet:hover  {
     opacity: 1;
     
-    
+}
+.tweet:hover .image1 {
+    visibility: visible;
+}
+.tweet:hover .image2 {
+    visibility: visible;
+}
+.tweet:hover .image3 {
+    visibility: visible;
 }
 .tweet{
+    overflow-wrap: break-word;
     opacity: 0.7;
     margin: 50px 2em auto 2em;
     border-radius: 10px;
@@ -78,6 +87,7 @@ footer{
 }
 
 textarea {
+    
     padding: 5px ;
     width: 350px;
     margin-bottom: 5px;
@@ -111,3 +121,23 @@ input {
    color: red;
    border: solid 1px red 
 }
+
+.image1 {
+    visibility: hidden;
+    float: right;
+    margin-right: 20px;
+}
+.image2 {
+    visibility: hidden;
+    float: right;
+    margin-right: 20px;
+}
+.image3 {
+    visibility: hidden;
+    float: right;
+    margin-right: 20px;
+}
+
+
+    
+    
