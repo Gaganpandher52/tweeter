@@ -13,7 +13,7 @@ module.exports = function makeDataHelpers(db) {
         if (err) {
           return callback(err);
         }else{
-        callback(null, true);
+        callback(null, newTweet);
       }
       });
     },

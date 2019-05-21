@@ -97,10 +97,10 @@ $(".tweet-form").submit(function(event){
   }else{
     var $form = $(this);
     let term = $form.find("textarea[name='text']").val();
-    $.post('/tweets', {text:term}).done(function(){
-        console.log(term);
-        loadedTweets();
-        $('textarea').val('');
+    $.post('/tweets', {text:term}).done(data =>{
+      $('textarea').val('');
+        renderTweets([data])
+        
     });
   }
   });//form submit
